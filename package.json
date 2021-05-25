@@ -1,0 +1,39 @@
+{
+  "name": "vite-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "fix": "npx prettier --write ."
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "lodash-es": "^4.17.21",
+    "prettier": "^2.3.0",
+    "vue": "^3.0.4"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "eslint": "^7.27.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "husky": "^6.0.0",
+    "less": "^4.1.1",
+    "less-loader": "^9.0.0",
+    "lint-staged": "^11.0.0",
+    "typescript": "^4.2.4",
+    "vite": "^1.0.0-rc.13",
+    "vue-router": "4.0.5"
+  },
+  "browserslist": [
+    "Android >= 4.0",
+    "iOS >= 8"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "npm run lint:eslint"
+  }
+}
